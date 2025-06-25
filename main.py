@@ -27,3 +27,5 @@ scene = [
 display_scene()
 time.sleep(1)
 print("Vous avez jusqu'à ce soir pour trouver du travail, sinon vous devrez quitter la maison de vos parents.") 
+
+### Les imports fonctions sont à mettre dans les fonctions, pas dans le main.py ###
