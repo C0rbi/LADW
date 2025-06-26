@@ -1,20 +1,9 @@
 import sys
 import os
-
-from Fonctions.display_scene import display_scene
-from Fonctions.choix import choix
-from Fonctions.Zone.entre_maison import entre_maison
-from story.intro import scene_intro, choix_intro, rep_intro, scene_intro_2
-'''
-display_scene(scene_intro)
-choix(choix_intro, rep_intro)
-display_scene(scene_intro_2)
-'''
-
-#entre_maison()
-
 import tkinter as tk
+
 from Fonctions.display_scene import display_scene, display_choix
+from Fonctions.Zone.entre_maison import entre_maison
 from story.intro import scene_intro, choix_intro, rep_intro, scene_intro_2
 
 def main():
@@ -46,11 +35,7 @@ def main():
         display_scene(
             scene_intro_2,
             text_widget,
-            lambda: display_choix(             
-                text_widget,
-                button_frame,
-                None  # Remplace None par une autre fonction pour la suite si besoin
-            )
+            lambda: entre_maison(text_widget, button_frame)  # Continue vers entre_maison après l'intro
         )
 
     next_scene()
