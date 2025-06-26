@@ -1,6 +1,6 @@
 def entre_maison(text_widget, button_frame):
     from Fonctions.display_scene import display_scene, display_choix
-    from Fonctions.variables import access_maison
+    from Fonctions.variables import game_state
     from Fonctions.Zone.maison import maison
     from Fonctions.Zone.ruelle import ruelle
 
@@ -15,7 +15,7 @@ def entre_maison(text_widget, button_frame):
     ]
 
     def handle_choix_1():
-        if access_maison:  # Vérification si l'accès à la maison est autorisé
+        if game_state.access_maison:  # Vérification si l'accès à la maison est autorisé
             display_scene([
                 "Vous entrez dans la maison.",
                 "L'intérieur est familier, mais vous sentez une pression de devoir trouver un travail rapidement."

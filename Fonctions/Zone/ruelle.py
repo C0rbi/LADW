@@ -1,12 +1,11 @@
 def ruelle(text_widget, button_frame):
     from Fonctions.display_scene import display_scene
     from Fonctions.Zone.entre_maison import entre_maison, display_choix_with_callbacks
-    from Fonctions.variables import blessure, piece
+    from Fonctions.variables import game_state
 
     scene_ruelle = [
         "Vous êtes dans une ruelle sombre et étroite.",
-        "Des poubelles renversées jonchent le sol, et des graffitis recouvrent les murs.",
-        "Un SDF vous regarde avec un sourire étrange.",
+        "Un SDF vous regarde avec un sourire étrange."
     ]
 
     choix_ruelle = [
@@ -16,14 +15,13 @@ def ruelle(text_widget, button_frame):
     ]
 
     def handle_choix_1():
-        global piece
-        if blessure and not piece:
+        if game_state.blessure and not game_state.piece:
             display_scene([
                 "Le SDF vous regarde avec compassion.",
                 "Le SDF vous donne une pièce par pitié.",
                 "Vous sentez une étrange connexion avec lui, mais vous décidez de ne pas rester"
             ], text_widget, lambda: entre_maison(text_widget, button_frame))
-            piece = True
+            game_state.piece = True
         else:
             display_scene([
                 "Le SDF vous regarde d'un air indifférent.",
