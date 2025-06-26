@@ -11,8 +11,8 @@ choix(choix_intro, rep_intro)
 display_scene(scene_intro_2)
 '''
 
-entre_maison()
-=======
+#entre_maison()
+
 import tkinter as tk
 from Fonctions.display_scene import display_scene, display_choix
 from story.intro import scene_intro, choix_intro, rep_intro, scene_intro_2
