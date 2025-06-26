@@ -3,7 +3,7 @@ def salon(text_widget, button_frame):
     from Fonctions.Zone.maison import maison
     from Fonctions.Zone.ruelle import ruelle
     from Fonctions.Zone.entre_maison import display_choix_with_callbacks
-    from Fonctions.variables import access_maison, blessure
+    from Fonctions.variables import game_state
 
     scene_salon = [
         "Vous êtes dans le salon."
@@ -23,14 +23,13 @@ def salon(text_widget, button_frame):
         ], text_widget, lambda: salon(text_widget, button_frame))
 
     def handle_choix_2():
-        global access_maison, blessure
         display_scene([
             "Vous regardez la télévision.",
             "Votre père vous regarde, prend sa ceinture et commence à vous battre.",
             "Vous vous reveillez dans la ruelle d'à côté, il fait nuit, vous avez le visage en sang.",
         ], text_widget, lambda: ruelle(text_widget, button_frame))
-        access_maison = False
-        blessure = True
+        game_state.access_maison = False
+        game_state.blessure = True
 
     def handle_choix_3():
         display_scene([
