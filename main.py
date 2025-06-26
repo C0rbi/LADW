@@ -11,17 +11,17 @@ def main():
     root.title("Affichage de la scène")
     root.geometry("600x400")
 
-    # Frame en bas de la fenêtre
+    # Frame principale en bas
     frame_bas = tk.Frame(root, bd=2, relief=tk.SUNKEN)
-    frame_bas.pack(side=tk.BOTTOM, fill=tk.X, padx=10, pady=10)
+    frame_bas.pack(side=tk.BOTTOM, fill=tk.X, padx=500, pady=50)  # Réduit le padding
 
     # Zone de texte
     text_widget = tk.Text(frame_bas, height=10, wrap=tk.WORD, font=("Arial", 12), state=tk.DISABLED)
     text_widget.pack(fill=tk.BOTH, expand=True)
 
-    # Frame pour les boutons de choix
+    # Frame pour les boutons de choix, placée FIXEMENT en bas
     button_frame = tk.Frame(frame_bas)
-    button_frame.pack(fill=tk.X, pady=5)
+    button_frame.pack(side=tk.BOTTOM, fill=tk.X, pady=5)  # Toujours en bas
 
     # Affichage de la première scène
     def next_scene():
@@ -35,7 +35,7 @@ def main():
         display_scene(
             scene_intro_2,
             text_widget,
-            lambda: entre_maison(text_widget, button_frame)  # Continue vers entre_maison après l'intro
+            lambda: entre_maison(text_widget, button_frame)
         )
 
     next_scene()
