@@ -1,6 +1,6 @@
-import time
 
 def choix(choix_list, rep_list):
+    import time
     for idx, choix_txt in enumerate(choix_list, 1):
         print(f"{idx}. {choix_txt}")
     while True:
