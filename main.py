@@ -30,7 +30,15 @@ def main():
         )
 
     def next_scene_2():
-        display_scene(scene_intro_2, text_widget, lambda: None)
+        display_scene(
+            scene_intro_2,
+            text_widget,
+            lambda: display_choix(             
+                text_widget,
+                button_frame,
+                None  # Remplace None par une autre fonction pour la suite si besoin
+            )
+        )
 
     next_scene()
     root.mainloop()
