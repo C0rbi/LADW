@@ -1,6 +1,6 @@
 scene_intro = [
     "??? - WEIMIN!!! FAUT QU'ON PARLE!!!\n",
-    "Vous vous réveillez par les cris de votre mère qui vous appelle.",
+    "Vous vous réveillez par les cries de votre mère qui vous appelle.",
     "Vous êtes dans votre chambre, allongé sur votre lit.",
     "Vous vous levez et vous allez voir votre mère.\n",
     "maman - Il est 14h30, tu as dormi toute la matinée et tu n'as toujours pas de travail.\n",
@@ -20,5 +20,5 @@ rep_intro = [
 scene_intro_2 = [
     "maman - Si tu ne trouves pas de travail à partir de ce soir, tu vas devoir partir de la maison.\n",
     "Vous sortez de la maison en quête de travail.",
-    "Vous vous retrouvez dans la rue, vous avez jusqu'à ce soir pour trouver du travail, sinon vous devrez quitter la maison de vos parents."
+    "Vous vous retrouvez dans la rue, vous avez jusqu'à ce soir pour trouver du travail, sinon vous devriez quitter la maison de vos parents."
 ]
